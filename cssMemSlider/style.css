@@ -20,8 +20,8 @@ body {
 	width: 80%;
     background-color: black;
     margin: auto;
-    margin-top: 1rem;
-    min-height: calc(100vh - 1rem);
+    margin-top: 3rem;
+    min-height: calc(100vh - 3rem);
 }
 
 .slider {
@@ -189,5 +189,10 @@ label:hover {
         background: url(../assets/img/winter300.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .container {
+        margin-top: 1rem;
+        min-height: calc(100vh - 1rem);
     }
 }
