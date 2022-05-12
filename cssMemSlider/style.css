@@ -46,21 +46,21 @@ body {
 }
 
 .slide1 {
-    background-image: url(../assets/img/winter.jpg);
+    background-image: url(./assets/img/winter.jpg);
 
 }
 
 .slide2 {
-    background-image: url(../assets/img/spring.jpg);
+    background-image: url(./assets/img/spring.jpg);
     
 }
 
 .slide3 {
-    background-image: url(../assets/img/summer.jpg);
+    background-image: url(./assets/img/summer.jpg);
 }
 
 .slide4 {
-    background-image: url(../assets/img/autumn_12.jpg);
+    background-image: url(./assets/img/autumn_12.jpg);
 }
 
 
@@ -186,7 +186,7 @@ label:hover {
     }
 
     .slide1{
-        background: url(../assets/img/winter300.jpg);
+        background: url(./assets/img/winter300.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
