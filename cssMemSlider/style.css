@@ -16,18 +16,18 @@ body {
 }
 
 .container {
-	height: calc(100vh - 40px);
-	position: relative;
+    position: relative;
 	width: 80%;
     background-color: black;
     margin: auto;
+    margin-top: 1rem;
+    min-height: calc(100vh - 1rem);
 }
 
 .slider {
     background-color: #ddd;
-    height: 36vw;
+    height: 50vw;
     width: 100%;
-    margin: 40px 0 40px;
     overflow: hidden;
     position: relative;
 
@@ -68,12 +68,15 @@ body {
 .wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 0 5%;
+    align-items: center;
+    padding: 7% 5% 3% 5%;
 }
 
 .text {
-    /* font-size: 2rem; */
+    font-size: 3rem;
     color: white;
+    display: none;
+    margin-left: 100px;
 }
 
 .btn {
@@ -93,18 +96,19 @@ footer {
 label {
     cursor: pointer;
     display: inline-block;
-    height: 12px;
+    height: 30px;
 	margin: 0 0 0 10px;
 	position: relative;
-	width: 12px;
+	width: 30px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
     border:  1px solid rgb(105, 105, 231);
     background: rgb(105, 105, 231);
-    transition: background ease-in-out .5s;
+    transition: background .5s ease-in-out ;
     color: white;
+    display: inline-flex;
 }
 
 label:hover {
@@ -139,9 +143,51 @@ label:hover {
 	-moz-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
+    animation: slider 1s ease;
 }
 
-#slide1:checked ~ .wrapper .text1 {
-    color: red;
+#slide1:checked ~ .wrapper .text1,
+#slide2:checked ~ .wrapper .text2,
+#slide3:checked ~ .wrapper .text3,
+#slide4:checked ~ .wrapper .text4 {
+    display: inline;
+    animation: text 0.5s forwards ease;
+
+    
 }
 
+.zone {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+@keyframes text {
+    from {margin-left: 100px; opacity: 0; font-size: 0.5rem;}
+    to {margin-left: 10px; opacity: 1; font-size: 4rem;}
+    
+}
+
+@keyframes slider {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+
+@media (max-width: 800px){
+    .wrapper{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    label {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slide1{
+        background: url(../assets/img/winter300.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
