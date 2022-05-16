@@ -132,10 +132,10 @@ footer {
 label {
     cursor: pointer;
     display: inline-block;
-    height: 30px;
+    height: 2.5rem;
 	margin: 0 0 0 10px;
 	/* position: relative; */
-	width: 30px;
+	width: 2.5rem;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
@@ -194,8 +194,8 @@ label:hover {
 }
 
 .zone {
-    width: 40px;
-    height: 40px;
+    width: 3rem;
+    height: 3rem;
     /* position: absolute; */
 }
 
@@ -215,11 +215,6 @@ label:hover {
     .wrapper{
         flex-direction: column-reverse;
         gap: 20px;
-    }
-
-    label {
-        width: 30px;
-        height: 30px;
     }
 
     .slide1{
