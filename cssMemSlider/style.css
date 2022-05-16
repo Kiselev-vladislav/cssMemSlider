@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    position: relative;
+    /* position: relative; */
 	width: 80%;
     background-color: black;
     margin: auto;
@@ -29,19 +29,55 @@ body {
     height: 50vw;
     width: 100%;
     overflow: hidden;
-    position: relative;
-
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* position: relative; */
+    /* transition: background 3s ease;  */
 }
 
+#slide1:checked ~ .slider {
+    background: url(./assets/img/winter.jpg);
+    transition: background 1s step-end;
+    background-position: center;
+    background-size: cover;
+}
+
+#slide2:checked ~ .slider {
+    background: url(./assets/img/spring.jpg);
+    transition: background 1s step-end;
+    background-position: center;
+    background-size: cover;
+}
+
+#slide3:checked ~ .slider {
+    background: url(./assets/img/summer.jpg);
+    transition: background 1s step-end;
+    background-position: center;
+    background-size: cover;
+}
+
+#slide4:checked ~ .slider {
+    background: url(./assets/img/autumn_12.jpg);
+    transition: background 1s step-end;
+    background-position: center;
+    background-size: cover;
+}
+
+
+    
+
 .slides {
-    position: absolute;
+    /* position: absolute; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
     z-index: 0;
+    display: none;
+
 
 }
 
@@ -98,7 +134,7 @@ label {
     display: inline-block;
     height: 30px;
 	margin: 0 0 0 10px;
-	position: relative;
+	/* position: relative; */
 	width: 30px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -144,6 +180,7 @@ label:hover {
 	-o-transform: scale(1);
 	transform: scale(1);
     animation: slider 1s ease;
+    display: block;
 }
 
 #slide1:checked ~ .wrapper .text1,
@@ -159,7 +196,7 @@ label:hover {
 .zone {
     width: 40px;
     height: 40px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 @keyframes text {
